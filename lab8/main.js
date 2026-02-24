@@ -63,7 +63,9 @@ let dataset = [
     { amount: 25.91, satisfaction: 3, category: "Survival/Spark", decision: 2 }
 ]; // data form chart decison window 1:Instant 2:Habit 3:Plan
 
-dataset.sort((a, b) => b.decision - a.decision); //Array sort.
+dataset.sort(function(a, b) {
+    return b.decision - a.decision;
+}); //Array sort. with no =>.
 
 let xScale = d3.scaleLinear()
     .domain([0, 3]) // change it to decisiopn window
